@@ -1,0 +1,28 @@
+package com.fitness.gymManagementSystem.dao;
+
+import java.util.List;
+
+import com.fitness.gymManagementSystem.bean.SlotItem;
+import com.fitness.gymManagementSystem.bean.SlotItemEmbed;
+
+public class SlotItemDaoImpl implements SlotItemDao {
+
+	@Override
+	public void saveNewSlotItem(SlotItem slotItem) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<SlotItem> displayAllItem() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public SlotItem findItemById(SlotItemEmbed id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
