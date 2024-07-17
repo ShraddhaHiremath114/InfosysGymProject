@@ -1,0 +1,5 @@
+package com.fitness.gymManagementSystem.exception;
+
+public class SeatNotAvailableException {
+
+}

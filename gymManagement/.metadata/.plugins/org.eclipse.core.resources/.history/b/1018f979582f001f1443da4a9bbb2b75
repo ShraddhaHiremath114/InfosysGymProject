@@ -1,5 +1,0 @@
-package com.fitness.gymManagementSystem.dao;
-
-public interface SlotItemRepository {
-
-}

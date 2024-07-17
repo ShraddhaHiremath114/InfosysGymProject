@@ -1,5 +1,7 @@
 package com.fitness.gymManagementSystem.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -8,30 +10,32 @@ import org.springframework.stereotype.Service;
 
 import com.fitness.gymManagementSystem.bean.GymUser;
 import com.fitness.gymManagementSystem.dao.GymUserRepository;
-
 @Service
 public class GymUserService implements UserDetailsService {
+@Autowired
+private GymUserRepository repository;
+private String type;
+private GymUser users;
 
-    @Autowired
-    private GymUserRepository repository;
+public void save(GymUser user) {
+repository.save(user);
+}
 
-    private String type;
+public String getType() {
+return type;
+}
 
-    public void save(GymUser user) {
-        repository.save(user);
-    }
+@Override
+public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException{
+users=repository.findById(username).get();
+type=users.getType();
+return users;
+}
+public GymUser getUser() {
+return users;
+}
+public List<String> getAllCustomers(){
+return repository.findAllCustomerUsers();
+}
 
-    public String getType() {
-        return type;
-    }
-
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return repository.findById(username)
-                .map(user -> {
-                    type = user.getType();
-                    return user;
-                })
-                .orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
-    }
 }

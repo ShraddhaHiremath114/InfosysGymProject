@@ -1,0 +1,45 @@
+package com.fitness.gymManagementSystem.dao;
+
+import java.util.List;
+
+import com.fitness.gymManagementSystem.bean.GymBook;
+
+public class GymBookDaoImpl implements GymBookDao {
+
+	@Override
+	public void save(GymBook gymBook) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Long generateBookingid() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<GymBook> getBookList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public GymBook findBookInfoById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteById(long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<GymBook> getEntitiesByUsername(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -8,63 +8,35 @@
 <meta charset="ISO-8859-1">
 <title>Item Report</title>
 <style type="text/css">
-body {
-
-            background-image: url("/Files/unisex3.jpg");
-            background-size: cover;
-            background-repeat: no-repeat !important;
-            background-attachment: fixed;
-            display: flex;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        table {
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            color: white;
-        }
-        td{
-        color: white;
-        }
-        a{
-        color: white;
-        }
+<%@include file="/WEB-INF/css/gymItemReportPage.css"%>
 </style>
 </head>
 <body>
-<div class="container" align="center">
+<div class="container" >
 <form action="gymitems" method="post">
-<table border="2">
+<table>
+<caption><h1><i>GYM ITEMS</i></h1></caption>
 <tr>
 <th>Item Number</th>
 <th>Item Name</th>
 <th>Total Seat/Slot</th>
+<th>Add To Slots</th>
 </tr>
 <c:forEach items="${itemList}" var="item">
 <tr>
 <td>${item.itemId}</td>
 <td>${item.itemName}</td>
 <td>${item.totalSeat}</td>
-
+<td><a href="/slot-item-add/${item.itemId}">Add To Slots</a></td>
 </tr>
 <br/><br/>
 
 </c:forEach>
 </table>
 <br/><br/>
-<a href="/index">return</a>
+<div class="return">
+<a href="/index"><button type="button">Return</button></a>
+</div>
 
 </form>
 </div>

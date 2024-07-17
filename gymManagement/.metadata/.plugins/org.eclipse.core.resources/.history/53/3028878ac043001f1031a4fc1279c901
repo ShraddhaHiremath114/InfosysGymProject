@@ -1,0 +1,5 @@
+package com.fitness.gymManagementSystem.dao;
+
+public class GymBookDao {
+
+}

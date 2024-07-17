@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-    <typeInfo handle="=gymManagementSystem/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.fitness.gymManagementSystem.dao{GymItemDao.java[GymItemDao" modifiers="513" timestamp="1718924308661"/>
+    <typeInfo handle="=gymManagementSystem/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.fitness.gymManagementSystem.dao{GymItemDao.java[GymItemDao" modifiers="513" timestamp="1720220925241"/>
     <typeInfo handle="=gymManagementSystem/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.fitness.gymManagementSystem.dao{SlotDao.java[SlotDao" modifiers="513" timestamp="1718924399207"/>
-    <typeInfo handle="=gymManagementSystem/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.fitness.gymManagementSystem.dao{SlotItemDao.java[SlotItemDao" modifiers="513" timestamp="1718924480717"/>
+    <typeInfo handle="=gymManagementSystem/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.fitness.gymManagementSystem.dao{SlotItemDao.java[SlotItemDao" modifiers="513" timestamp="1720220998742"/>
+    <typeInfo handle="=gymManagementSystem/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.fitness.gymManagementSystem.dao{GymBookDao.java[GymBookDao" modifiers="513" timestamp="1721167970874"/>
 </typeInfoHistroy>
