@@ -1,0 +1,81 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Slot Entry</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 500px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    label {
+        font-weight: bold;
+        color: #555;
+    }
+    input[type="text"], input[type="number"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    button {
+        padding: 10px;
+        color: #fff;
+        background-color: #007BFF;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button[type="reset"] {
+        background-color: #6c757d;
+    }
+    button:hover {
+        opacity: 0.9;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Manage Slot</h1>
+    <form:form id="slot-entry-page" action="/slotentry" method="post" modelAttribute="slotRecord">
+        <div>
+            <label for="slotTime">Slot Time:</label>
+            <form:input path="slotTime" required="required"/>
+        </div>
+        <form:hidden path="slotId"/>
+        <div>
+            <label for="pricing">Pricing:</label>
+            <form:input path="pricing" required="required"/>
+        </div>
+        <div>
+            <button type="submit">Add Slot</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form:form>
+</div>
+</body>
+</html>
